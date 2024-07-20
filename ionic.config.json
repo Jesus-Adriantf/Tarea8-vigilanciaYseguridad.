@@ -1,0 +1,7 @@
+{
+  "name": "seguridad_20220066",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
