@@ -8,6 +8,22 @@
   transform: translateY(-50%);
 }
 
+ion-header {
+  --background: #323F4C; 
+}
+
+ion-toolbar {
+  --background: #323F4C; 
+  --color: #ffffff; 
+}
+
+ion-title {
+  font-size: 17px; 
+  /*font-weight: bold; */
+  color: #ffffff; 
+}
+
+
 #container strong {
   font-size: 20px;
   line-height: 26px;
@@ -24,4 +40,37 @@
 
 #container a {
   text-decoration: none;
+}
+
+.header-icon {
+  width: 70px; 
+  height: 70px; 
+  margin-right: 10px; 
+}
+
+
+.add-emergency-button {
+  --color: #ffffff; 
+  --background: linear-gradient(45deg, #34B4DE, #46CFE0); 
+  --border-color: transparent;
+  --border-radius: 70px; 
+  --padding: 19px 25px; 
+  --box-shadow: 0px 4px 8px rgba(0,0,0,0.2); 
+  font-weight: bold; 
+}
+
+.delete {
+  --color: #11688a !important;
+}
+
+.about-button {
+  --color: #16b3f1 !important;
+}
+
+.delete-all-button {
+  --background: #323f4cc7; 
+  --color: #fff; 
+  --box-shadow: 0px 4px 6px rgba(0,0,0,0.1); 
+  --padding: 8px 16px; 
+  --font-weight: bold; 
 }

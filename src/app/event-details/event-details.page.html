@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle del evento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img [src]="event.photo" *ngIf="event.photo"/>
+    <ion-card-header>
+      <ion-card-title>{{ event.title }}</ion-card-title>
+      <ion-card-subtitle>{{ event.date | date }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ event.description }}</p>
+      <audio class="audio" *ngIf="event.audio" controls>
+        <source [src]="event.audio" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

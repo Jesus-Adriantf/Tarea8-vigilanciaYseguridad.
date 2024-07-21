@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Registrar Operación Secreta</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-item>
+      <ion-label class="titulo" position="floating">Titulo</ion-label>
+      <ion-input [(ngModel)]="event.title"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Descripcion</ion-label>
+      <ion-textarea [(ngModel)]="event.description"></ion-textarea>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Fecha</ion-label>
+      <ion-datetime [(ngModel)]="event.date"></ion-datetime>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Foto</ion-label>
+      <input type="file" (change)="onFileSelected($event)" />
+      <img *ngIf="event.photo" [src]="event.photo" class="event-photo" />
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Audio</ion-label>
+      <input type="file" (change)="onAudioSelected($event)" />
+    </ion-item>
+  
+    <ion-button expand="full"  (click)="saveEvent()">Guardar</ion-button>
+  </ion-content>
+  

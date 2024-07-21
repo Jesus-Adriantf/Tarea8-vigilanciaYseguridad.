@@ -1,20 +1,32 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <!--<ion-buttons slot="start">
+      <img src="assets/guardaespaldas.webp" alt="Icono de Guardaespaldas" class="header-icon" />
+    </ion-buttons>-->
+     <ion-title><strong>Vigilancia</strong> Secreta</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/about" class="about-button">Acerca de</ion-button>
+      <ion-button routerLink="/add-event" class="add-emergency-button">Añadir</ion-button>
+     
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-button expand="full" class="delete-all-button" (click)="deleteAllEvents()">Borrar Todo</ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  <img src="assets/seguridad.avif" alt="Emergency Image" class="emergency-image" />
+  <ion-list class="event-list">
+    <ion-item *ngFor="let event of events" (click)="viewEvent(event)">
+      <ion-thumbnail slot="start">
+        <img [src]="event.photo" *ngIf="event.photo" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ event.title }}</h2>
+        <p>{{ event.date | date }}</p>
+      </ion-label>
+      <ion-button fill="clear" class="delete" slot="end" (click)="deleteEvent(event)"><strong>Eliminar</strong></ion-button>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

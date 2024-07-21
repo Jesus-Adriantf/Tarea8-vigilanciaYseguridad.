@@ -1,0 +1,26 @@
+ion-header {
+  --background: #323F4C; 
+}
+
+ion-toolbar {
+  --background: #323F4C;
+  --color: #ffffff;
+}
+
+ion-card {
+  --background: #323F4C;
+}
+
+ion-card-title {
+    color: #ffffff; 
+    font-weight: bold; 
+  }
+  
+  ion-card-subtitle {
+    --color: #16b3f1 !important;
+    font-weight: bold; 
+  }
+  
+  ion-card-content {
+    color: #ffffffac; 
+  }
